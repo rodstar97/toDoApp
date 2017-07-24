@@ -1,5 +1,6 @@
 import json, codecs
-
+import logging
+logger = logging.getLogger(__name__)
 
 
 def write_json_file(data):
