@@ -1,22 +1,35 @@
 from task import Task
 import logging
 import json
-from rw_data import write_json_file
+import datetime
+from rw_json_data import write_json_file, read_json_file
+from pprint import pprint
+
+
 
 def testStuff():
     objectlist = []
-    for i in range(19):
-        a = Task(name='{0}'.format(i))
-        objectlist.append(a)
 
 
-    json_string = json.dumps([ob.__dict__ for ob in objectlist])
+    # create two entries
+    task1 = Task(name='task1')
+    task2 = Task(name='task2')
 
-    write_json_file(json_string)
+    task1.priority=1001
+    task2.priority=-6
+    objectlist.append(task1)
+    objectlist.append(task2)
 
-    a = Task(name='te55st')
 
-    a.priority=1001
-    logging.info(a.priority)
+
+    write_json_file(task1)
+    #print datetime.datetime.utcnow()
+    data = read_json_file()
+    #print data
+    # pprint(data)
+
+
+testStuff()
+
 
 
