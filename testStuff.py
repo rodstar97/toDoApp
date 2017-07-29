@@ -17,16 +17,16 @@ def testStuff():
 
     task1.priority=1001
     task2.priority=-6
+    #append to list
     objectlist.append(task1)
     objectlist.append(task2)
 
 
 
-    write_json_file(task1)
-    #print datetime.datetime.utcnow()
+    write_json_file(objectlist)
     data = read_json_file()
-    #print data
-    # pprint(data)
+    print data
+
 
 
 testStuff()

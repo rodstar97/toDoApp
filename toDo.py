@@ -5,7 +5,7 @@ from testStuff import testStuff
 
 
 def main():
-    #logging.basicConfig(level=logging.DEBUG)
+    logging.basicConfig(level=logging.DEBUG)
     logging.info('started')
     testStuff()
     logging.info('Finished')
